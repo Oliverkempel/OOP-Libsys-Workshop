@@ -60,4 +60,26 @@ The <u>console</u> <u>interface</u> should **guide** the <u>user</u> with clear 
 
 |Potential Methods (Nouns)|
 |-----|
-||
+|Manage|
+|Share|
+|View|
+|Download|
+|Watch|
+|Read|
+|Play|
+|Complete|
+|Execute|
+|Listen|
+|Display|
+|Rate|
+|Ask|
+|Identify|
+|Interact|
+|List|
+|Select|
+|Preview|
+|Perform|
+|Manage|
+|Add|
+|Remove|
+|View|
