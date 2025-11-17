@@ -25,7 +25,7 @@ The **supported** <u>actions</u> should be **made** available to all <u>user</u>
 
 The <u>console</u> <u>interface</u> should **guide** the <u>user</u> with clear <u>instructions</u> and **validate** all <u>inputs</u>. <u>Errors</u> or invalid <u>actions</u> should not **pass** this <u>filter</u>. The <u>design</u> should **anticipate** <u>growth</u> through <u>extensibility</u>, **ensuring** that new <u>media</u> <u>types</u> or <u>user</u> <u>roles</u> can be **added** without **disrupting** existing <u>functionality</u>.
 
-|Class|
+|Potential Classes (Verbs)|
 |-----|
 |Libaray|
 |Media|
@@ -39,4 +39,25 @@ The <u>console</u> <u>interface</u> should **guide** the <u>user</u> with clear 
 |Picture|
 |Information|
 |Director|
+|Genre|
+|User|
+|Composer|
+|Singer|
+|Filetype|
+|Platform|
+|Version|
+|**Media Item**|
+|Admin|
+|Empoyee|
+|Borrorer|
+|User Inrterface|
+|Details|
+|Actions|
+|Console interface|
+|Instruction|
+|Filter|
+|User roles|
+
+|Potential Methods (Nouns)|
+|-----|
 ||
