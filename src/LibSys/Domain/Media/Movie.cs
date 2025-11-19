@@ -15,6 +15,10 @@
         public TimeSpan Duration {get; set;}
         public Movie(string title, string Genre, int ReleaseYear, string Language, TimeSpan Duration) : base(title)
         {
+            this.Genre = Genre;
+            this.ReleaseYear = ReleaseYear;
+            this.Language = Language;
+            this.Duration = Duration;
             
         }
         public string LocalFilePath { get; set; }
