@@ -1,15 +1,19 @@
 ﻿namespace LibSys
 {
     using LibSys.Domain.User;
+    using LibSys.Persistance;
 
     using System;
     using System.Reflection.Metadata;
 
     class Program
     {
-        public static Library lib { get; set; } = new Library();
+        public static Library lib { get; set; }
         public static void Main(string[] args)
         {
+
+            lib = new Library(new TestDataProvider());
+
             while(true)
             {
                 Console.WriteLine("Please enter username: ");
