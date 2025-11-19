@@ -14,19 +14,19 @@
         public string Name { get; set; }
         public int Age { get; set; }
         public string CPRNum { get; set; }
-        public Role Role { get; set; }
+        public int RoleId { get; set; }
+        public Role? Role { get; set; }
 
-        public User(string username, string name, int age, string cprNum, Role role)
+        public User(string username, string name, int age, string cprNum, int roleId )
         {
             Id = currentId + 1;
             Username = username;
             Name = name;
             Age = age;
             CPRNum = cprNum;
-            Role = role;
+            RoleId = roleId;
 
             currentId = Id;
-            Role = role;
         }
 
     }
