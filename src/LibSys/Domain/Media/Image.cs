@@ -8,5 +8,7 @@
 
     public class Image : Media, IOpenable
     {
+        public string LocalFilePath { get; set; }
+        public void Open();
     }
 }
