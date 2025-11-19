@@ -8,8 +8,14 @@
 
     internal class App
     {
-        public int version;
-        public List<string> SupportedPlatforms;
-        public int fileSize;
+        public override int Title {get; set;}
+        public int Vesion { get; set; }
+        public List<string> SupportedPlatforms { get; set; }
+        public int FileSize { get; set; }
+
+        public override getDesc()
+        {
+            Console.WriteLine($"App: {Title} Version: {Version} SupportedPlatforms: {SupportedPlatforms} FileSize: {FileSize}");
+        }
     }
 }
