@@ -8,5 +8,12 @@
 
     public interface IBorrowable
     {
+        BorrwStatus Status { get; set; }
+
+        DateOnly ReturnDate {  get; set; }
+
+        bool Borrw();
+
+        bool Return();
     }
 }

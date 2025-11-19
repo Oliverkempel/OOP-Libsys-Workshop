@@ -8,5 +8,6 @@
 
     public interface IReadable
     {
+        void BeginRead();
     }
 }
