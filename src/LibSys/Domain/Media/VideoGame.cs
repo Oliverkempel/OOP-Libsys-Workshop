@@ -7,7 +7,7 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    public class VideoGame
+    public class VideoGame : Media
     {
         public string Genre { get; set; }
         public int ReleaseYear { get; set; }

@@ -37,7 +37,7 @@
         public List<Media> getMedias()
         {
             List<Media> medias = new List<Media>();
-            
+            //medias.Add(new VideoGame() { Genre = "Action", ReleaseYear = 2029, SupportedPlatforms = new List<string>{"Windows"} });
 
             return medias;
         }
