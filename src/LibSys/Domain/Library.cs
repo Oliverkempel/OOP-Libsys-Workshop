@@ -1,6 +1,8 @@
 ﻿namespace LibSys
 {
+    using LibSys.Domain.Media;
     using LibSys.Domain.User;
+    using LibSys.Persistance.Interfaces;
 
     using System;
     using System.Collections.Generic;
@@ -11,32 +13,23 @@
 
     public class Library
     {
+        private IDataProvider _data { get; set; }
         public List<User> Users { get; set;} = new List<User>();
         public List<Role> Roles { get; set;} = new List<Role>();
+        public List<Media> Medias { get; set;} = new List<Media>();
 
-        public User currentUser { get; set; }
+        public User? currentUser { get; set; }
 
-        public Library()
+        public Library(IDataProvider dataProvider)
         {
-            initUsers();
-            initRoles();
-        }
+            // Dependency inject the dataprovider
+            _data = dataProvider;
 
-        public void initUsers()
-        {
-            Users.Add(new User("oliverthebigdawg", "Oliver kempel", 22, "290703-5560", Roles.Find(x => x.Name == "Admin")));
-            Users.Add(new User("noaththepussyslayer", "Noah Bøttern", 22, "220704-2323", Roles.Find(x => x.Name == "Admin")));
-            Users.Add(new User("magnusthecatwisperer", "Magnus Mørup", 21, "210207-9986", Roles.Find(x => x.Name == "Admin")));
-        }
+            // Start by loading users and roles from persistant storage
+            Users = _data.getUsers();
+            Roles = _data.getRoles();
+            Medias = _data.getMedias();
 
-        public void initRoles()
-        {
-            // Admin has all roles.
-            Roles.Add(new Role("Admin", new List<Permissions> { Permissions.deleteMedia, Permissions.addMedia, Permissions.editMedia, Permissions.deleteMedia, Permissions.borrowMedia, Permissions.returnMedia }));
-            
-            // Employee and user does not have all permissions
-            Roles.Add(new Role("Employee", new List<Permissions> { Permissions.deleteMedia, Permissions.addMedia, Permissions.editMedia, Permissions.deleteMedia, Permissions.borrowMedia, Permissions.returnMedia }));
-            Roles.Add(new Role("User", new List<Permissions> { Permissions.borrowMedia, Permissions.returnMedia }));
         }
 
         public bool login(string username)
@@ -65,6 +58,11 @@
                 return true;
             }
             return false;
+        }
+
+        public List<Media> getAllMedia()
+        {
+            return Medias;
         }
 
     }

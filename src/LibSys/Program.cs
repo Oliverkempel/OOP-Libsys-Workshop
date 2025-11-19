@@ -1,16 +1,22 @@
 ﻿namespace LibSys
 {
+    using LibSys.Domain.Media;
     using LibSys.Domain.User;
+    using LibSys.Persistance;
 
     using System;
     using System.Reflection.Metadata;
 
     class Program
     {
-        public static Library lib { get; set; } = new Library();
+        public static Library lib { get; set; }
         public static void Main(string[] args)
         {
-            while(true)
+
+            lib = new Library(new TestDataProvider());
+
+
+            while(lib.currentUser == null)
             {
                 Console.WriteLine("Please enter username: ");
                 string username = Console.ReadLine();
@@ -30,6 +36,17 @@
                 }
             }
             
+            Console.WriteLine("Welcome to the gooner library!");
+            Console.WriteLine("====================[ List of media in lib ]====================");
+            foreach(Media media in lib.Medias)
+            {
+                Console.WriteLine(media.getDesc());
+            }
+
+        }
+
+        public void drawList()
+        {
 
         }
     }
