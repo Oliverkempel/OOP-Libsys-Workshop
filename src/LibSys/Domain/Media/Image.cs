@@ -15,8 +15,12 @@
         public int FileSize {get; set;}
         public DateOnly DateTaken {get; set;}
         
-        public Image(string title) : base(title)
+        public Image(string title, string Resolution, string FileFormat, int FileSize, DateOnly DateTaken ) : base(title)
         {
+            this.Resolution = Resolution;
+            this.FileFormat = FileFormat;
+            this.FileSize = FileSize;
+            this.DateTaken = DateTaken;
         }
         public string LocalFilePath { get; set; }
 
@@ -27,7 +31,8 @@
         
         public override string getDesc()
         {
-            return "Hej";
+            return
+                $"Title: {Title} Resolution: {Resolution} File Format: {FileFormat} File Size: {FileSize} Date Taken: {DateTaken}";
         }
     }
 }
