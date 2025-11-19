@@ -17,13 +17,17 @@
         public List<string> SupportedPlatforms { get; set; }
         public int FileSize { get; set; }
 
-        public App(string title) : base(title)
+        public App(string title, string publisher, int version, int fileSize, List<string> supportedPlatforms) : base(title)
         {
+            Publisher = publisher;
+            Version = version;
+            FileSize = fileSize;
+            SupportedPlatforms = supportedPlatforms;
         }
 
         public override string getDesc()
         {
-            return $"App: {Title} Version: {Version} SupportedPlatforms: {SupportedPlatforms} FileSize: {FileSize}";
+            return $"App: {Title} Version: {Version} SupportedPlatforms: {SupportedPlatforms.ToString()} FileSize: {FileSize}";
         }
 
         public void Execute()

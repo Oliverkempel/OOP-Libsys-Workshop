@@ -37,7 +37,10 @@
         public List<Media> getMedias()
         {
             List<Media> medias = new List<Media>();
-            //medias.Add(new VideoGame() { Genre = "Action", ReleaseYear = 2029, SupportedPlatforms = new List<string>{"Windows"} });
+            medias.Add(new Movie("Svampebob the movie", "Hype", 2005, "Danish", new TimeSpan(1, 20, 34)));
+            medias.Add(new App("Excel", "Microsoft", 19, 12000, new List<string> { "Android", "iOS", "Windows", "MacOS" }));
+            medias.Add(new Movie("Spiderman", "Action", 2009, "English", new TimeSpan(2, 34, 12)));
+            medias.Add(new App("Angry birds", "Rovi", 12, 3600, new List<string> { "Android", "iOS", "Linux"}));
 
             return medias;
         }
