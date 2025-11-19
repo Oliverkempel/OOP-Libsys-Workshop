@@ -8,5 +8,15 @@
 
     public class Rating
     {
+        public int Stars { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+
+        public Rating(int stars, string title, string description) 
+        {
+            this.Stars = stars;
+            this.Title = title;
+            this.Description = description;
+        }
     }
 }
