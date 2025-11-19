@@ -13,7 +13,7 @@
         public static void Main(string[] args)
         {
 
-            lib = new Library(new TestDataProvider());
+            lib = new Library(new FileDataProvider());
 
 
             while(lib.currentUser == null)

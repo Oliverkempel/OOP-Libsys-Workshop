@@ -8,7 +8,7 @@
 
     public class Role
     {
-        private static int currentId = 0;
+        //private static int currentId = 0;
 
         public int Id { get; set; }
         public string Name { get; set; }
@@ -23,10 +23,6 @@
             }
 
             Name = name;
-
-            Id = currentId++;
-            currentId = Id;
-
         }
 
     }

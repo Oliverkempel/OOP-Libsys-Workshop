@@ -2,6 +2,7 @@
 {
     using LibSys.Domain.Media;
     using LibSys.Domain.User;
+    using LibSys.Persistance;
     using LibSys.Persistance.Interfaces;
 
     using System;
@@ -13,14 +14,12 @@
 
     public class Library
     {
-        private IDataProvider _data { get; set; }
-        public List<User> Users { get; set;} = new List<User>();
-        public List<Role> Roles { get; set;} = new List<Role>();
+        private FileDataProvider _data { get; set; }
         public List<Media> Medias { get; set;} = new List<Media>();
 
         public User? currentUser { get; set; }
 
-        public Library(IDataProvider dataProvider)
+        public Library(FileDataProvider dataProvider)
         {
             // Dependency inject the dataprovider
             _data = dataProvider;
@@ -29,6 +28,9 @@
             //Users = _data.getUsers();
             //Roles = _data.getRoles();
             //Medias = _data.getMedias();
+
+            _data.Roles.Find(x => x.Name == "Admin").Permissions.Add(Permissions.getAllMedia);
+            _data.UpdateCSV();
 
         }
 
@@ -67,7 +69,7 @@
                 throw new Exception("User does not have access.");
             }
 
-            return Medias;
+            return _data.Medias;
         }
 
     }
