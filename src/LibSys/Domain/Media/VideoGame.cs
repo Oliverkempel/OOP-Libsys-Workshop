@@ -14,9 +14,15 @@
         public List<string> SupportedPlatforms { get; set; }
          
 
-        public VideoGame()
+        public VideoGame(string title, string genre) : base(title)
         {
+            Genre = genre;
             SupportedPlatforms = new List<string>();
+        }
+
+        public override string getDesc()
+        {
+            throw new NotImplementedException();
         }
     }
 }
