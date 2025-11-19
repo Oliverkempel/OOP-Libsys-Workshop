@@ -15,7 +15,12 @@
             this.Title = title;
         }
 
-        public abstract string getDesc();
+        public abstract string getDesc()
+        {
+            return "Dillertjavs";
+        }
+            
+        
 
     }
 }
