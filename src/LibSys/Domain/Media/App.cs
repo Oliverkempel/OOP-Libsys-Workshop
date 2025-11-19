@@ -1,19 +1,25 @@
 ﻿namespace LibSys.Domain.Media
 {
+    using LibSys.Domain.Interfaces;
+
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
-    public class App : Media, IExecutable 
+    public class App : Media, IExecutable
     {
-        public override int Title {get; set;}
+
         public string Publisher {get; set;}
-        public int Vesion { get; set; } 
+        public int Version { get; set; } 
         public string LocalFilePath { get; set; }
         public List<string> SupportedPlatforms { get; set; }
         public int FileSize { get; set; }
+
+        public App(string title) : base(title)
+        {
+        }
 
         public override string getDesc()
         {

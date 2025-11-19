@@ -15,7 +15,7 @@
             this.Title = title;
         }
 
-        public abstract string GetDesc();
+        public abstract string getDesc();
 
     }
 }
