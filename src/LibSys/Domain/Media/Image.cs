@@ -6,7 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    public class Image
+    public class Image : Media, IOpenable
     {
     }
 }

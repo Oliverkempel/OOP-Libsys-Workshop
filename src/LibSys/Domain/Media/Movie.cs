@@ -6,7 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    public class Movie
+    public class Movie : Media, IOpenable
     {
     }
 }
