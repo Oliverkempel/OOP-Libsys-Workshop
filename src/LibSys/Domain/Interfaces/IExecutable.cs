@@ -8,5 +8,7 @@
 
     public interface IExecutable
     {
+        public string LocalFilePath;
+        public void Execute();
     }
 }
