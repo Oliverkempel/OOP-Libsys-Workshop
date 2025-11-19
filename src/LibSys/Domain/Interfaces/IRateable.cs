@@ -8,5 +8,10 @@
 
     public interface IRateable
     {
+        List<Rating> Ratings { get; set; }
+
+        void AddRating(Rating rating);
+
+        Rating GetAvgRating();
     }
 }
