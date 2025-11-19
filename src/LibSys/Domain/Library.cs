@@ -26,16 +26,16 @@
             _data = dataProvider;
 
             // Start by loading users and roles from persistant storage
-            Users = _data.getUsers();
-            Roles = _data.getRoles();
-            Medias = _data.getMedias();
+            //Users = _data.getUsers();
+            //Roles = _data.getRoles();
+            //Medias = _data.getMedias();
 
         }
 
         public bool login(string username)
         {
             // try to find a user with specified username
-            User? usr = Users.Find(_ => _.Username == username);
+            User? usr = _data.Users.Find(_ => _.Username == username);
 
             // Check if user is found
             if(usr is not null)
@@ -60,8 +60,13 @@
             return false;
         }
 
-        public List<Media> getAllMedia()
+        public List<Media>? getAllMedia()
         {
+           if( !AuthorizationHandler.CheckAuth(currentUser, Permissions.getAllMedia))
+            {
+                throw new Exception("User does not have access.");
+            }
+
             return Medias;
         }
 

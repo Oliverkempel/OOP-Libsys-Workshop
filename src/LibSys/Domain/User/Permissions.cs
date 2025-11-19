@@ -12,6 +12,7 @@
         editMedia,
         addMedia,
         borrowMedia,
-        returnMedia
+        returnMedia,
+        getAllMedia,
     }
 }

@@ -11,8 +11,11 @@
 
     public interface IDataProvider
     {
-        public List<User> getUsers();
-        public List<Role> getRoles();
-        public List<Media> getMedias();
+        public List<User> Users { get; set; }
+        public List<Role> Roles { get; set; }
+        public List<Media> Medias { get; set; }
+        //public List<User> getUsers();
+        //public List<Role> getRoles();
+        //public List<Media> getMedias();
     }
 }

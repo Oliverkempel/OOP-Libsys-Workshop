@@ -27,5 +27,9 @@
         {
             throw new NotImplementedException();
         }
+
+        public List<User> Users { get; set; }
+        public List<Role> Roles { get; set; }
+        public List<Media> Medias { get; set; }
     }
 }

@@ -38,10 +38,17 @@
             
             Console.WriteLine("Welcome to the gooner library!");
             Console.WriteLine("====================[ List of media in lib ]====================");
-            foreach(Media media in lib.Medias)
+            try
             {
-                Console.WriteLine(media.getDesc());
+                foreach (Media media in lib.getAllMedia())
+                {
+                    Console.WriteLine(media.getDesc());
+                }
+            } catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
+
 
         }
 

@@ -29,5 +29,10 @@
             currentId = Id;
         }
 
+        public void getRole()
+        {
+
+        }
+
     }
 }
