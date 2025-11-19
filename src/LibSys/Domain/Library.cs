@@ -60,5 +60,10 @@
             return false;
         }
 
+        public List<Media> getAllMedia()
+        {
+            return Medias;
+        }
+
     }
 }

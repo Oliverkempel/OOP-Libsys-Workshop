@@ -1,5 +1,6 @@
 ﻿namespace LibSys
 {
+    using LibSys.Domain.Media;
     using LibSys.Domain.User;
     using LibSys.Persistance;
 
@@ -14,7 +15,8 @@
 
             lib = new Library(new TestDataProvider());
 
-            while(true)
+
+            while(lib.currentUser == null)
             {
                 Console.WriteLine("Please enter username: ");
                 string username = Console.ReadLine();
@@ -34,6 +36,17 @@
                 }
             }
             
+            Console.WriteLine("Welcome to the gooner library!");
+            Console.WriteLine("====================[ List of media in lib ]====================");
+            foreach(Media media in lib.Medias)
+            {
+                Console.WriteLine(media.getDesc());
+            }
+
+        }
+
+        public void drawList()
+        {
 
         }
     }
