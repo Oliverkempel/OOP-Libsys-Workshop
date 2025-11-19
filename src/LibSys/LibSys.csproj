@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Persistance\" />
+    <Folder Include="Presentation\" />
+  </ItemGroup>
+
 </Project>
