@@ -8,5 +8,8 @@
 
     internal class App
     {
+        public int version;
+        public List<string> SupportedPlatforms;
+        public int fileSize;
     }
 }
