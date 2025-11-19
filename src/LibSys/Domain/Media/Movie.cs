@@ -24,7 +24,7 @@
         }
         public override string getDesc()
         {
-            return "Your mom";
+            return $"{this.Title} | Released: {this.ReleaseYear} | Lang: {this.Language} | Duration: {this.Duration.ToString()}";
         }
     }
 }

@@ -22,7 +22,7 @@
 
         public override string getDesc()
         {
-            throw new NotImplementedException();
+            return $"{this.Title} | Genre: {this.Genre} | Released: {this.ReleaseYear}";
         }
     }
 }
