@@ -28,7 +28,8 @@
         }
         public override string getDesc()
         {
-            return $"{this.Title} | Released: {this.ReleaseYear} | Lang: {this.Language} | Duration: {this.Duration.ToString()}";
+            return
+                $"{this.Title} | Released: {this.ReleaseYear} | Lang: {this.Language} | Duration: {this.Duration.ToString()}";
         }
     }
 }
