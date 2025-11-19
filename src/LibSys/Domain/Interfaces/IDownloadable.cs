@@ -8,5 +8,8 @@
 
     public interface IDownloadable
     {
+        public string URL { get; set; }
+
+        FileInfo Download();
     }
 }

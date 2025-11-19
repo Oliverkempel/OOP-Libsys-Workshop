@@ -8,7 +8,14 @@
 
     public abstract class Media
     {
+    public string Title { get; set; } 
 
+    public Media(string title)
+        {
+            this.Title = title;
+        }
+
+        public abstract string GetDesc();
 
     }
 }
