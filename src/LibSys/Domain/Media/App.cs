@@ -20,7 +20,7 @@
             return $"App: {Title} Version: {Version} SupportedPlatforms: {SupportedPlatforms} FileSize: {FileSize}";
         }
 
-        public override void Execute()
+        public void Execute()
         {
             
         }
